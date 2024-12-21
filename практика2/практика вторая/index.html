@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700" />
+
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+
+    <meta name="x-apple-disable-message-reformatting" />
+
+    <style>
+      .weather-card-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 380px;
+        height: 530px;
+        padding: 20px;
+        overflow: hidden;
+        background: white;
+        border-radius: 10px;
+      }
+      .weather-info-container {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-start;
+        align-self: stretch;
+        justify-content: flex-start;
+        height: 44px;
+        overflow: hidden;
+      }
+      .input-container {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        align-self: stretch;
+        justify-content: start;
+        width: 276px;
+        min-width: 276px;
+        height: 44px;
+        padding-left: 15px;
+        font: 400 15px Inter, sans-serif;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+      }
+      .transparent-input-style {
+        box-sizing: border-box;
+        width: 100%;
+        font: 400 15px Inter, sans-serif;
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+      .input-style-8bc68c0e::placeholder {
+        color: black;
+      }
+      .centered-svg-container {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        align-self: stretch;
+        justify-content: center;
+        width: 44px;
+        padding: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+      }
+      .svg-container {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+      }
+      .weather-card1 {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        align-self: stretch;
+        justify-content: center;
+        min-width: 340px;
+        overflow: hidden;
+      }
+      .weather-card {
+        box-sizing: border-box;
+        display: block;
+        flex: 0 0 auto;
+        width: 220px;
+        max-width: initial;
+        height: 220px;
+        overflow: hidden;
+      }
+      .temperature-display {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        font: 400 45px Inter, sans-serif;
+        color: black;
+      }
+      .weather-description-text-style {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        font: 400 25px Inter, sans-serif;
+        color: black;
+      }
+      .weather-forecast-widget {
+        box-sizing: border-box;
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-start;
+        align-self: stretch;
+        justify-content: flex-start;
+        overflow: hidden;
+      }
+      .weather-info-container1 {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        align-self: stretch;
+        justify-content: center;
+        width: 55px;
+        overflow: hidden;
+      }
+      .current-temperature-widget-heading {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        font: 700 15px Inter, sans-serif;
+        color: black;
+      }
+      .temperature-icon {
+        box-sizing: border-box;
+        display: block;
+        flex: 0 0 auto;
+        width: 40px;
+        max-width: initial;
+        height: 40px;
+        overflow: hidden;
+      }
+      .temperature-info-widget {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        font: 400 15px Inter, sans-serif;
+        color: black;
+      }
+      .time-weather-widget {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        align-self: stretch;
+        justify-content: center;
+        width: 15px;
+        overflow: hidden;
+      }
+      .time-info-widget {
+        box-sizing: border-box;
+        display: block;
+        flex: 0 0 auto;
+        width: 7.5px;
+        max-width: initial;
+        height: 40px;
+        overflow: hidden;
+      }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div style="display: inline-block; width: 380px" data-ignore="used only for top most containter width">
+      <div class="weather-card-container">
+        <div class="weather-info-container">
+          <!-- PLACEHOLDER - Input Component detected here. Go to "React Code" via right click menu to see code generated -->
+          <div class="centered-svg-container">
+            <div class="svg-container">
+              <svg viewBox="0 0 30 30" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <clipPath id="clip1_1_2" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="30" height="30" fill="white" transform="translate(0, 0)" />
+                  </clipPath>
+                </defs>
+                <g id="location-target-svgrepo-com 1" clip-path="url(#clip1_1_2)" xmlns="http://www.w3.org/2000/svg">
+                  <path id="Vector" d="M15,18.75c2.071,0 3.75,-1.679 3.75,-3.75c0,-2.071 -1.679,-3.75 -3.75,-3.75c-2.071,0 -3.75,1.679 -3.75,3.75c0,2.071 1.679,3.75 3.75,3.75z" fill="black" />
+                  <path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M3.906,13.125c0.79,-4.711 4.508,-8.429 9.219,-9.219v-3.906h3.75v3.906c4.711,0.79 8.429,4.508 9.219,9.219h3.906v3.75h-3.906c-0.79,4.711 -4.508,8.429 -9.219,9.219v3.906h-3.75v-3.906c-4.711,-0.79 -8.429,-4.508 -9.219,-9.219h-3.906v-3.75zM7.5,15c0,-4.142 3.358,-7.5 7.5,-7.5c4.142,0 7.5,3.358 7.5,7.5c0,4.142 -3.358,7.5 -7.5,7.5c-4.142,0 -7.5,-3.358 -7.5,-7.5z" fill="black" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="weather-card1">
+          <img src="assets/image_2c2f7699.png" class="weather-card" />
+          <p class="temperature-display">-3°С</p>
+          <p class="weather-description-text-style">Облачно</p>
+        </div>
+        <div class="weather-forecast-widget">
+          <div class="weather-info-container1">
+            <p class="current-temperature-widget-heading">Сейчас</p>
+            <img src="assets/image_66f171cf.png" class="temperature-icon" />
+            <p class="temperature-info-widget">-3°С</p>
+          </div>
+          <div class="weather-info-container1">
+            <p class="current-temperature-widget-heading">11:00</p>
+            <img src="assets/image_66f171cf.png" class="temperature-icon" />
+            <p class="temperature-info-widget">-3°С</p>
+          </div>
+          <div class="weather-info-container1">
+            <p class="current-temperature-widget-heading">12:00</p>
+            <img src="assets/image_66f171cf.png" class="temperature-icon" />
+            <p class="temperature-info-widget">-3°С</p>
+          </div>
+          <div class="weather-info-container1">
+            <p class="current-temperature-widget-heading">13:00</p>
+            <img src="assets/image_66f171cf.png" class="temperature-icon" />
+            <p class="temperature-info-widget">-3°С</p>
+          </div>
+          <div class="weather-info-container1">
+            <p class="current-temperature-widget-heading">14:00</p>
+            <img src="assets/image_66f171cf.png" class="temperature-icon" />
+            <p class="temperature-info-widget">-3°С</p>
+          </div>
+          <div class="time-weather-widget">
+            <p class="current-temperature-widget-heading">15:00</p>
+            <img src="assets/image_e7d93856.png" class="time-info-widget" />
+            <p class="temperature-info-widget">-3°С</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
